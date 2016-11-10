@@ -42,15 +42,6 @@
     daysOfWeek: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
   };
 
-
-  /***** 
-   * global event listeners
-   */
-  //document.addEventListener('x', function() {
-  window.onload = function() {
-    app.updateForecastCard(injectedForecast);
-  };
-
   /*****************************************************************************
    *
    * Event listeners for UI elements
@@ -184,5 +175,8 @@
       app.getForecast(key);
     });
   };
+
+  // load the cached data
+  app.updateForecastCard(injectedForecast);
 
 })();
